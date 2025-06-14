@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
+import 'package:structur_project/features/auth/presentation/sign_in_screen.dart';
+import 'package:structur_project/features/product/presentation/new_screen.dart';
 import 'package:structur_project/features/product/presentation/product_screen.dart';
 
 import '../loading.dart';
@@ -13,6 +15,7 @@ final class Routes {
 
   static const String newScreen = '/newScreen';
   static const String productScreen = '/productScreen';
+  static const String signInScreen = '/signInScreen';
 }
 
 final class RouteGenerator {
@@ -32,6 +35,18 @@ final class RouteGenerator {
             ? _FadedTransitionRoute(
                 widget: const ProductScreen(), settings: settings)
             : CupertinoPageRoute(builder: (context) => const ProductScreen());
+
+      case Routes.signInScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const SignInScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => const SignInScreen());
+
+      case Routes.newScreen:
+        return Platform.isAndroid
+            ? _FadedTransitionRoute(
+                widget: const NewScreen(), settings: settings)
+            : CupertinoPageRoute(builder: (context) => const NewScreen());
 
       // case Routes.mainNavigationBar:
       //   final args = settings.arguments as Map;

@@ -7,7 +7,6 @@ import 'package:structur_project/assets_helper/app_images.dart';
 import 'package:structur_project/common_widgets/CustomButton.dart';
 import 'package:structur_project/common_widgets/custom_app_bar.dart';
 import 'package:structur_project/helpers/all_routes.dart';
-import 'package:structur_project/helpers/loading.dart';
 import 'package:structur_project/helpers/navigation_service.dart';
 import 'package:structur_project/helpers/ui_helpers.dart';
 
@@ -38,7 +37,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             UIHelper.verticalSpace(40.h),
             Image.asset(
-              AppImages.baby_one,
+              AppImages.logo_one,
               height: 230.h,
             ),
             UIHelper.verticalSpace(39.h),
@@ -59,13 +58,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 btnText: 'Next',
                 onCall: () {
                   // Show loading dialog before navigation if needed
-                  showDialog(
-                    context: NavigationService.context,
-                    builder: (context) => loadingIndicatorCircle(
-                      context: context,
-                    ),
-                  );
-                  NavigationService.navigateTo(Routes.productScreen);
+                  // showDialog(
+                  //   context: NavigationService.context,
+                  //   builder: (context) => loadingIndicatorCircle(
+                  //     context: context,
+                  //   ),
+                  // );
+                  // NavigationService.navigateTo(Routes.productScreen);
+                  NavigationService.navigateTo(Routes.signInScreen);
                 },
               ),
             ),

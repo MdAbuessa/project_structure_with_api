@@ -14,6 +14,7 @@ final class GetAllProductRX extends RxResponseInt<RecipieProductModel> {
 
   GetAllProductRX({required super.empty, required super.dataFetcher});
   ValueStream get allProductsStream => dataFetcher.stream;
+
   Future<void> getAllProducts() async {
     try {
       RecipieProductModel data = await api.getAllProduct();
