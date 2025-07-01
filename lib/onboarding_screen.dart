@@ -65,7 +65,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       context: context,
                     ),
                   );
-                  NavigationService.navigateTo(Routes.productScreen);
+                  NavigationService.navigateTo(Routes.welcomeScreen);
                 },
               ),
             ),
