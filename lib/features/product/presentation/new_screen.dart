@@ -7,10 +7,10 @@ class NewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('hello'),
+        title: Text('New Screen'),
       ),
       body: Center(
-        child: Text('Some issue'),
+        child: Text('All products will be displayed here.'),
       ),
     );
   }

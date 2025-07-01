@@ -38,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             UIHelper.verticalSpace(40.h),
             Image.asset(
-              AppImages.baby_one,
+              AppImages.logo_one,
               height: 230.h,
             ),
             UIHelper.verticalSpace(39.h),
@@ -59,6 +59,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 btnText: 'Next',
                 onCall: () {
                   // Show loading dialog before navigation if needed
+
                   showDialog(
                     context: NavigationService.context,
                     builder: (context) => loadingIndicatorCircle(
@@ -66,6 +67,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   );
                   NavigationService.navigateTo(Routes.welcomeScreen);
+
+                  // showDialog(
+                  //   context: NavigationService.context,
+                  //   builder: (context) => loadingIndicatorCircle(
+                  //     context: context,
+                  //   ),
+                  // );
+                  // NavigationService.navigateTo(Routes.productScreen);
+                  NavigationService.navigateTo(Routes.signInScreen);
                 },
               ),
             ),

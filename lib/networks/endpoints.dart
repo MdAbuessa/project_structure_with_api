@@ -1,8 +1,16 @@
 // ignore_for_file: constant_identifier_names, unnecessary_string_interpolations
 
 // const String url = String.fromEnvironment("BASE_URL");
+
 const String url = "https://fakestoreapi.com/";
 //const String url = "http://127.0.0.1:8000/api";
+
+//below url is used for dummy data for products
+// const String url = "https://dummyjson.com/";
+
+//this url is used for signin
+// const String url = "https://admin.letme.no/api/";
+
 // ignore: unnecessary_brace_in_string_interps
 const String imageUrl = "${url}";
 
@@ -31,5 +39,8 @@ final class Endpoints {
   static String getAllProducts() => "/products";
   static String getWelcome() => "/carts?userId=1";
   static String getAllUser() => "/api/v1/categories";
+
   static String signin() => "/signin/";
+
+  static String signIn() => "/v1/app/signin/";
 }
