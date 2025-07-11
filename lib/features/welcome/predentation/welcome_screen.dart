@@ -22,7 +22,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF00B2FF),
         title: Text(
-          'Welcome Screen',
+          'This is Welcome Screen ',
         ),
         centerTitle: true,
       ),
